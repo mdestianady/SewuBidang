@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEWU BIDANG | Etnomatematika Semarang</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --coklat: #5b3a1e;
+            --emas: #d4a373;
+            --krem: #f4efe8;
+            --putih: #ffffff;
+            --gelap: #2c2c2c;
+            --transparan: rgba(255, 255, 255, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(244, 239, 232, 0.79), rgba(244, 239, 232, 0.79)), 
+                        url('lawangsewu.jpg.jpeg'); 
+            background-size: cover;
+            background-attachment: fixed;
+            color: #3a2a1a;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(91, 58, 30, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--emas);
+            letter-spacing: 1px;
+        }
+
+        nav .menu a {
+            color: var(--krem);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav .menu a:hover {
+            color: var(--emas);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            padding: 150px 20px 120px;
+            background: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 64px);
+            margin-bottom: 10px;
+            color: var(--coklat);
+            font-weight: 800;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 18px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .cta {
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.4s;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: var(--coklat);
+            color: white;
+            box-shadow: 0 10px 20px rgba(91, 58, 30, 0.3);
+        }
+
+        .cta:hover {
+            transform: translateY(-5px);
+            background: var(--emas);
+            color: var(--gelap);
+        }
+
+        /* --- SECTION GENERAL --- */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 50px;
+            border-radius: 30px;
+            transition: 0.4s;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--coklat);
+            color: var(--krem);
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            nav { padding: 15px 5%; }
+            nav .menu { display: none; }
+            .hero h1 { font-size: 38px; }
+            .card { padding: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">SEWU BIDANG</div>
+    <div class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="lawangsewu.html">Lawang Sewu</a>
+        <a href="materi.html">Materi</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="tentang.html">Tentang</a>
+    </div>
+</nav>
+
+<section class="hero" data-aos="fade-up">
+    <span class="math-tag" style="background: rgba(212, 163, 115, 0.2); color: var(--coklat); padding: 5px 15px; border-radius: 30px; font-weight: 700; font-size: 12px; display: inline-block; margin-bottom: 10px;">Etnomatematika Semarang</span>
+    <h1>Menemukan Bidang <br> Dalam Sejarah</h1>
+    <p>Belajar geometri melalui kemegahan arsitektur Lawang Sewu dan ikon bersejarah Semarang lainnya. Cara baru memahami matematika melalui budaya.</p>
+    <div class="cta-group">
+        <a href="materi.html" class="cta cta-primary">Pelajari Materi</a>
+    </div>
+</section>
+
+<section>
+    <div class="card" style="text-align: left; background: var(--coklat); color: var(--krem);" data-aos="flip-up">
+        <h2 style="font-family: 'Playfair Display'; color: var(--emas); font-size: 32px; margin-top: 0;">Filosofi Sewu Bidang</h2>
+        <p style="line-height: 2; font-size: 16px;">
+            Nama "Sewu Bidang" terinspirasi dari Lawang Sewu (Seribu Pintu). Kami percaya bahwa setiap pintu dan jendela sejarah adalah gerbang menuju ilmu pengetahuan. Dengan mengintegrasikan <b>Etnomatematika</b>, siswa diajak tidak hanya menghafal rumus, tapi menghargai warisan budaya yang ada di depan mata mereka.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo">SEWU BIDANG</div>
+    <p>Media Pembelajaran Geometri Berbasis Kearifan Lokal Semarang</p>
+    <div style="margin: 20px 0; font-size: 20px;">
+        <span>🌐</span> <span>📸</span> <span>📧</span>
+    </div>
+    <hr style="opacity: 0.1; margin: 30px 0;">
+    <small>© 2025 | Dibuat untuk Pendidikan Indonesia Berkarakter</small>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: 'ease-in-out'
+    });
+</script>
+
+</body>
+</html>

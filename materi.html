@@ -56,6 +56,10 @@
             text-transform: uppercase;
         }
 
+        nav .menu a:hover {
+            color: var(--emas);
+        }
+
         .hero-materi {
             height: 80vh;
             background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
@@ -174,13 +178,23 @@
 
 <div class="container">
 
-    <div style="text-align: center; margin-bottom: 50px;">
-        <a href="https://www.canva.com/design/DAG7uja0Vs8/49u8Hjst-H-5ft-IRvydCg/view"
-           target="_blank"
-           style="padding: 15px 30px; background: var(--emas); color: var(--coklat-tua); text-decoration: none; border-radius: 50px; font-weight: bold;">
-            Buka PPT Materi →
-        </a>
-    </div>
+<div style="text-align: center; margin-bottom: 50px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+
+    <!-- Tombol PPT -->
+    <a href="https://www.canva.com/design/DAG7uja0Vs8/49u8Hjst-H-5ft-IRvydCg/view"
+       target="_blank"
+       style="padding: 15px 30px; background: var(--emas); color: var(--coklat-tua); text-decoration: none; border-radius: 50px; font-weight: bold;">
+        Buka PPT Materi →
+    </a>
+
+    <!-- Tombol e-LKPD -->
+    <a href="https://www.canva.com/design/DAG7vt3fUrc/v-bQtHu52xil6EVPPaxfAA/edit?utm_content=DAG7vt3fUrc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+       target="_blank"
+       style="padding: 15px 30px; background: var(--coklat-muda); color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold;">
+        Buka e-LKPD ✍️
+    </a>
+
+</div>
 
     <div class="grid-materi">
 
@@ -191,6 +205,8 @@
             <div class="formula-box">
                 <p>Luas (L) = <b>s × s</b></p>
                 <p>Keliling (K) = <b>4 × s</b></p>
+                <hr>
+                <p><i>Keterangan:</i> s = sisi</p>
             </div>
         </div>
 
@@ -201,6 +217,8 @@
             <div class="formula-box">
                 <p>Luas (L) = <b>p × l</b></p>
                 <p>Keliling (K) = <b>2 × (p + l)</b></p>
+                <hr>
+                <p><i>Keterangan:</i> p = panjang, l = lebar</p>
             </div>
         </div>
 
@@ -211,6 +229,8 @@
             <div class="formula-box">
                 <p>Luas (L) = <b>½ × a × t</b></p>
                 <p>Keliling (K) = <b>s1 + s2 + s3</b></p>
+                <hr>
+                <p><i>Keterangan:</i> a = alas, t = tinggi</p>
             </div>
         </div>
 
@@ -221,6 +241,8 @@
             <div class="formula-box">
                 <p>Luas (L) = <b>½ × (a + b) × t</b></p>
                 <p>Keliling (K) = <b>Jumlah seluruh sisi</b></p>
+                <hr>
+                <p><i>Keterangan:</i> a & b = sisi sejajar, t = tinggi</p>
             </div>
         </div>
 
@@ -231,6 +253,8 @@
             <div class="formula-box">
                 <p>Luas (L) = <b>a × t</b></p>
                 <p>Keliling (K) = <b>2 × (a + b)</b></p>
+                <hr>
+                <p><i>Keterangan:</i> a = alas, b = sisi miring, t = tinggi</p>
             </div>
         </div>
 
@@ -247,27 +271,31 @@
         <!-- Gambar Lawang Sewu -->
         <div style="flex:1 1 260px; max-width:420px;">
             <img 
-                src="jajargenjang.jpg"
+                src="segitiga.jpg"
                 alt="Bangunan Lawang Sewu Semarang"
                 style="width:100%; border-radius:16px;">
             <small style="color:#7a6a56; display:block; margin-top:6px;">
-                Elemen arsitektur Lawang Sewu menampilkan bentuk jajar genjang pada bagian atap.
+                Elemen arsitektur Lawang Sewu menampilkan bentuk segitiga pada bagian atap.
             </small>
         </div>
 
         <!-- Teks dan contoh soal -->
         <div style="flex:1 1 300px;">
-            <h4>Saat berdiri di halaman Lawang Sewu</h4>
+            <h4>Saat berdiri di halaman luar Lawang Sewu</h4>
 
             <p>
-                Misalkan salah satu bidang atap berbentuk jajar genjang memiliki alas <b>14 m</b> 
-                dan tinggi <b>5 m</b>. Hitunglah luasnya!
+                Bagian atap kecil di Lawang Sewu berbentuk <b>segitiga sama kaki</b> 
+                dengan alas <b>6 meter</b> dan tinggi <b>4 meter</b>.  
+                Berapakah luas permukaan tampak depan atap tersebut?
             </p>
 
             <div style="background:#efe9e0; padding:15px; border-radius:15px; border-left:5px solid var(--coklat-muda); font-size:14px;">
-                Rumus: L = a × t → 14 × 5 = <b>70 m²</b>
+                Rumus: L = ½ × a × t → ½ × 6 × 4 = <b>12 m²</b>
+                <br>
+                <small><i>Keterangan: a = alas, t = tinggi</i></small>
             </div>
         </div>
+
 
     </div>
 </div>

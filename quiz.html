@@ -31,7 +31,7 @@
       min-height:100vh;
     }
 
-    /* NAVBAR */
+    /* ===== NAVBAR ===== */
     nav{
       position:sticky;
       top:0;
@@ -39,17 +39,39 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:14px 40px;
+      padding:12px 40px;
       background:rgba(91,58,30,.96);
       box-shadow:0 6px 20px rgba(0,0,0,.25);
     }
 
-    nav .logo{
+    .logo-container{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo-box{
+      background:white;
+      padding:6px;
+      border-radius:6px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .logo-box img{
+      height:36px;
+      width:auto;
+      display:block;
+    }
+
+    .logo-text{
       font-family:'Playfair Display',serif;
       font-size:20px;
       letter-spacing:2px;
       color:var(--krem);
       text-transform:uppercase;
+      font-weight:700;
     }
 
     nav .menu a{
@@ -65,7 +87,7 @@
       color:var(--emas);
     }
 
-    /* QUIZ CONTAINER */
+    /* ===== QUIZ CONTAINER ===== */
     .wrapper{
       min-height:calc(100vh - 70px);
       display:flex;
@@ -105,7 +127,6 @@
       margin:0 auto 30px;
     }
 
-    /* PETUNJUK QUIZ */
     .quiz-guide{
       max-width:720px;
       margin:0 auto 35px;
@@ -165,7 +186,6 @@
       line-height:1.6;
     }
 
-    /* RESPONSIVE */
     @media(max-width:600px){
       nav{
         flex-direction:column;
@@ -180,19 +200,28 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- ===== NAVBAR ===== -->
 <nav>
-    <div class="logo">SEWU BIDANG</div>
-    <div class="menu">
-        <a href="index.html">Beranda</a>
-        <a href="lawangsewu.html">Lawang Sewu</a>
-        <a href="materi.html">Materi</a>
-        <a href="quiz.html">Quiz</a>
-        <a href="tentang.html">Tentang</a>
+  <div class="logo-container">
+    <div class="logo-box">
+      <img src="logo-unimus.png" alt="Logo UNIMUS">
     </div>
+    <div class="logo-box">
+      <img src="logo-me.png" alt="Logo Pendidikan Matematika">
+    </div>
+    <div class="logo-text">SEWU BIDANG</div>
+  </div>
+
+  <div class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="lawangsewu.html">Lawang Sewu</a>
+    <a href="materi.html">Materi</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="tentang.html">Tentang</a>
+  </div>
 </nav>
 
-<!-- QUIZ CONTENT -->
+<!-- ===== QUIZ CONTENT ===== -->
 <div class="wrapper">
   <div class="quiz-container">
     <h1>SEWU BIDANG</h1>
@@ -202,32 +231,24 @@
       Kerjakan quiz berikut untuk menguji pemahamanmu tentang
       <strong>bangun datar</strong> melalui konteks
       <strong>arsitektur Lawang Sewu</strong>.
-      Quiz dikerjakan menggunakan platform Wordwall.
     </p>
 
-    <!-- PETUNJUK -->
     <div class="quiz-guide">
       <h3>Petunjuk Cara Bermain Quiz</h3>
       <ol>
-        <li>Klik tombol <strong>“Mulai Quiz”</strong> untuk membuka quiz.</li>
-        <li>Perhatikan instruksi yang muncul di halaman Wordwall.</li>
-        <li>Baca setiap soal dengan teliti sebelum menjawab.</li>
-        <li>Pilih jawaban yang paling tepat sesuai pemahamanmu.</li>
-        <li>Setiap soal hanya dapat dijawab satu kali.</li>
-        <li>Lihat skor akhir setelah quiz selesai dikerjakan.</li>
+        <li>Klik tombol <b>Mulai Quiz</b>.</li>
+        <li>Ikuti instruksi pada halaman Wordwall.</li>
+        <li>Baca soal dengan teliti.</li>
+        <li>Pilih jawaban yang paling tepat.</li>
+        <li>Lihat skor akhir setelah selesai.</li>
       </ol>
     </div>
 
-    <a 
-      href="https://wordwall.net/resource/104580406" 
-      target="_blank" 
-      class="quiz-btn">
+    <a href="https://wordwall.net/resource/104580406" target="_blank" class="quiz-btn">
       MULAI QUIZ
     </a>
 
-    <p class="note">
-      Pastikan koneksi internet stabil sebelum memulai quiz.
-    </p>
+    <p class="note">Pastikan koneksi internet stabil.</p>
 
     <footer>
       © 2025 | SEWU BIDANG<br>

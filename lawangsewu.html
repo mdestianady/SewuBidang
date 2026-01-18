@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sejarah Lawang Sewu | SEWU BIDANG</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -25,20 +25,42 @@
             line-height: 1.8;
         }
 
-                nav {
+        /* ===== NAVBAR ===== */
+        nav {
             position: sticky;
             top: 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 8%;
+            padding: 12px 8%;
             background: rgba(91, 58, 30, 0.95);
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        nav .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            background: white;
+            padding: 6px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            height: 38px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             font-weight: 700;
@@ -60,15 +82,14 @@
             color: var(--emas);
         }
 
+        /* ===== HERO ===== */
         .history-hero {
-
             height: 80vh;
-            background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                         url('lawang-sewu.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -81,12 +102,6 @@
             font-size: clamp(40px, 8vw, 70px);
             margin-bottom: 10px;
             letter-spacing: 3px;
-        }
-
-        .history-hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            font-weight: 300;
         }
 
         .container {
@@ -114,18 +129,8 @@
             font-family: 'Playfair Display', serif;
             font-size: 75px;
             line-height: 60px;
-            padding-top: 4px;
             padding-right: 8px;
             color: var(--emas);
-        }
-
-        .highlight-box {
-            background: var(--krem);
-            border-left: 5px solid var(--emas);
-            padding: 25px;
-            margin: 30px 0;
-            font-style: italic;
-            border-radius: 0 15px 15px 0;
         }
 
         .fact-grid {
@@ -181,10 +186,21 @@
         }
     </style>
 </head>
+
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <nav>
-    <div class="logo">SEWU BIDANG</div>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="logo-unimus.png" alt="Logo UNIMUS">
+        </div>
+        <div class="logo-box">
+            <img src="logo-me.png" alt="Logo Pendidikan Matematika">
+        </div>
+        <div class="logo-text">SEWU BIDANG</div>
+    </div>
+
     <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="lawangsewu.html">Lawang Sewu</a>
@@ -194,7 +210,8 @@
     </div>
 </nav>
 
-    <section class="history-hero">
+<!-- ===== HERO ===== -->
+<section class="history-hero">
         <div data-aos="fade-down">
             <h1>Lawang Sewu</h1>
             <p>Saksi Bisu Sejarah Perkeretaapian dan Perjuangan Indonesia</p>
@@ -256,12 +273,10 @@
         <p>© 2025 SEWU BIDANG - Melestarikan Sejarah Melalui Edukasi</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
 </body>
 </html>

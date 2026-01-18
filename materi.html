@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Materi Bangun Datar | SEWU BIDANG</title>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -25,6 +25,7 @@
             line-height: 1.6;
         }
 
+        /* ================= NAVBAR ================= */
         nav {
             position: sticky;
             top: 0;
@@ -35,15 +36,39 @@
             padding: 15px 8%;
             background: rgba(91, 58, 30, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
         }
 
-        nav .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* LOGO DENGAN BACKGROUND PUTIH */
+        .logo-box {
+            background: white;
+            padding: 6px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: var(--emas);
             letter-spacing: 1px;
+            margin-left: 6px;
         }
 
         nav .menu a {
@@ -52,22 +77,22 @@
             margin-left: 25px;
             font-size: 14px;
             font-weight: 500;
-            transition: 0.3s;
             text-transform: uppercase;
+            transition: 0.3s;
         }
 
         nav .menu a:hover {
             color: var(--emas);
         }
 
+        /* ================= HERO ================= */
         .hero-materi {
             height: 80vh;
-            background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                         url('animasils.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -154,12 +179,47 @@
             .grid-materi { grid-template-columns: 1fr; }
             .container { padding: 25px; margin-top: -30px; }
         }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav .menu {
+                display: none;
+            }
+
+            .logo-box img {
+                height: 34px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .container {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
 <nav>
-    <div class="logo">SEWU BIDANG</div>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="logo-unimus.png" alt="Logo UNIMUS">
+        </div>
+
+        <div class="logo-box">
+            <img src="logo-me.png" alt="Logo Pendidikan Matematika UNIMUS">
+        </div>
+
+        <div class="logo-text">SEWU BIDANG</div>
+    </div>
+
     <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="lawangsewu.html">Lawang Sewu</a>
@@ -171,7 +231,7 @@
 
 <section class="hero-materi">
     <div data-aos="fade-up">
-        <h1 style="font-family: 'Playfair Display'; font-size: 45px;">Bangun Datar</h1>
+        <h1 style="font-family:'Playfair Display'; font-size:45px;">Bangun Datar</h1>
         <p>Pahami Rumus Melalui Arsitektur Kota Semarang</p>
     </div>
 </section>
@@ -394,6 +454,15 @@
             h.innerHTML = "⚠️ Coba lagi. Gunakan rumus: L = p × l";
         }
     }
+</script>
+
+<footer style="background: var(--coklat-tua); color: white; text-align: center; padding: 30px;">
+    <p>© 2025 SEWU BIDANG - Media Belajar Etnomatematika</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true });
 </script>
 
 </body>

@@ -25,16 +25,15 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(rgba(244, 239, 232, 0.6), rgba(244, 239, 232, 0.6)), 
-                        url('lawangsewu.jpg.jpeg'); 
+            background: linear-gradient(rgba(244,239,232,.6), rgba(244,239,232,.6)),
+                        url('lawangsewu.jpg.jpeg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             color: var(--coklat-tua);
-            line-height: 1.6;
         }
 
-        /* --- NAVBAR --- */
+        /* ===== NAVBAR ===== */
         nav {
             position: sticky;
             top: 0;
@@ -42,18 +41,38 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 8%;
+            padding: 12px 8%;
             background: rgba(91, 58, 30, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 30px rgba(0,0,0,.1);
         }
 
-        nav .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            background: white;
+            padding: 6px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            height: 36px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: var(--emas);
-            text-decoration: none;
             letter-spacing: 1px;
         }
 
@@ -63,13 +82,13 @@
             margin-left: 25px;
             font-size: 14px;
             font-weight: 500;
-            transition: 0.3s;
             text-transform: uppercase;
+            transition: .3s;
         }
 
         nav .menu a:hover { color: var(--emas); }
 
-        /* --- CONTAINER --- */
+        /* ===== CONTENT ===== */
         .about-container {
             max-width: 1100px;
             margin: 60px auto;
@@ -77,10 +96,10 @@
         }
 
         .main-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255,255,255,.9);
             padding: 60px;
             border-radius: 40px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,.15);
         }
 
         h1, h2 {
@@ -94,11 +113,11 @@
             padding: 15px 25px;
             margin: 30px 0;
             font-style: italic;
-            background: rgba(212, 163, 115, 0.1);
+            background: rgba(212,163,115,.1);
             border-radius: 0 15px 15px 0;
         }
 
-        /* --- TEAM SECTION --- */
+        /* ===== TEAM ===== */
         .team-section {
             margin-top: 80px;
             text-align: center;
@@ -115,17 +134,17 @@
         .team-item {
             flex: 0 1 calc(30% - 20px);
             min-width: 260px;
-            background: var(--putih);
+            background: white;
             padding: 35px 20px;
             border-radius: 30px;
-            border: 1px solid rgba(212, 163, 115, 0.1);
-            transition: 0.4s;
+            transition: .4s;
+            border: 1px solid rgba(212,163,115,.15);
         }
 
         .team-item:hover {
             transform: translateY(-10px);
             border-color: var(--emas);
-            box-shadow: 0 15px 30px rgba(91, 58, 30, 0.1);
+            box-shadow: 0 15px 30px rgba(91,58,30,.1);
         }
 
         .team-img {
@@ -133,7 +152,6 @@
             height: 110px;
             border-radius: 50%;
             margin: 0 auto 15px;
-            background: var(--krem);
             overflow: hidden;
             border: 3px solid var(--emas);
         }
@@ -144,7 +162,6 @@
             object-fit: cover;
         }
 
-        /* --- FOOTER --- */
         footer {
             background: var(--coklat);
             color: var(--krem);
@@ -160,10 +177,21 @@
         }
     </style>
 </head>
+
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <nav>
-    <div class="logo">SEWU BIDANG</div>
+    <div class="logo-container">
+        <div class="logo-box">
+            <img src="logo-unimus.png" alt="Logo UNIMUS">
+        </div>
+        <div class="logo-box">
+            <img src="logo-me.png" alt="Logo Pendidikan Matematika">
+        </div>
+        <div class="logo-text">SEWU BIDANG</div>
+    </div>
+
     <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="lawangsewu.html">Lawang Sewu</a>
@@ -175,87 +203,43 @@
 
 <div class="about-container">
     <div class="main-card" data-aos="fade-up">
-        <span style="background: rgba(212, 163, 115, 0.2); color: var(--coklat); padding: 5px 15px; border-radius: 30px; font-weight: 700; font-size: 11px; text-transform: uppercase;">Our Story</span>
-        
+
         <h1>Tentang Sewu Bidang</h1>
-        <p>
-            <b>Sewu Bidang</b> adalah sebuah inisiatif media pembelajaran inovatif yang menjembatani kekayaan budaya lokal Semarang dengan konsep matematika formal. Kami percaya bahwa belajar matematika tidak harus selalu kaku di dalam buku teks.
-        </p>
+        <p><b>Sewu Bidang</b> adalah media pembelajaran etnomatematika yang mengaitkan budaya Semarang dengan konsep matematika.</p>
 
         <div class="highlight-box">
-            "Menghidupkan kembali sejarah melalui kacamata geometri, agar setiap sudut cagar budaya menjadi ruang kelas yang inspiratif."
-        </div>
-
-        <h2>Misi Kami</h2>
-        <ul style="padding-left: 20px;">
-            <li><b>Etnomatematika:</b> Memperkenalkan siswa pada penerapan matematika dalam budaya dan arsitektur nyata.</li>
-            <li><b>Pelestarian Budaya:</b> Meningkatkan rasa cinta generasi muda terhadap cagar budaya di Semarang.</li>
-            <li><b>Visualisasi Kreatif:</b> Menyediakan materi yang estetik dan mudah dipahami secara visual.</li>
-        </ul>
-
-        <!-- PANDUAN QR CODE -->
-        <div class="guide-section" data-aos="fade-up" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(212, 163, 115, 0.2); text-align:center;">
-            <h2 style="margin-bottom: 20px;">Panduan Penggunaan</h2>
-            <p style="opacity: .8; max-width: 550px; margin: 0 auto 25px;">
-                Scan QR Code berikut untuk melihat panduan lengkap penggunaan media pembelajaran Sewu Bidang.
-            </p>
-
-            <div style="display:inline-block; padding:20px; background:#fff; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.1);">
-                <img src="panduan.png" alt="QR Code Panduan" style="width:220px; height:220px;">
-            </div>
+            "Menghidupkan kembali sejarah melalui kacamata geometri."
         </div>
 
         <div class="team-section">
             <h2>Tim Pengembang</h2>
-            <p style="opacity: 0.8;">Inovator di balik media pembelajaran Sewu Bidang.</p>
-            
+
             <div class="team-grid">
-                <div class="team-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-img"><img src="zula.jpg" alt="Dev 1"></div>
-                    <h4 style="margin: 10px 0 5px;">Zulaikah Az-Zahro</h4>
-                    <span style="font-size: 12px; font-weight: 600; color: var(--emas); text-transform: uppercase;">B2B023017</span>
+                <div class="team-item">
+                    <div class="team-img"><img src="zula.jpg"></div>
+                    <h4>Zulaikah Az-Zahro</h4>
                 </div>
-
-                <div class="team-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-img"><img src="maya.jpg" alt="Dev 2"></div>
-                    <h4 style="margin: 10px 0 5px;">Maya Destiana Dwi Ariani</h4>
-                    <span style="font-size: 12px; font-weight: 600; color: var(--emas); text-transform: uppercase;">B2B023023</span>
+                <div class="team-item">
+                    <div class="team-img"><img src="maya.jpg"></div>
+                    <h4>Maya Destiana Dwi Ariani</h4>
                 </div>
-
-                <div class="team-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="team-img"><img src="suci.jpg" alt="Dev 3"></div>
-                    <h4 style="margin: 10px 0 5px;">Suci Putri Utami</h4>
-                    <span style="font-size: 12px; font-weight: 600; color: var(--emas); text-transform: uppercase;">B2B023030</span>
-                </div>
-
-                <div class="team-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="team-img"><img src="qoni.jpg" alt="Dev 4"></div>
-                    <h4 style="margin: 10px 0 5px;">Qoni'atul Khosyi'ah</h4>
-                    <span style="font-size: 12px; font-weight: 600; color: var(--emas); text-transform: uppercase;">B2B023039</span>
-                </div>
-
-                <div class="team-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="team-img"><img src="selvi.jpg" alt="Dev 5"></div>
-                    <h4 style="margin: 10px 0 5px;">Selvinia Putri Rahayu</h4>
-                    <span style="font-size: 12px; font-weight: 600; color: var(--emas); text-transform: uppercase;">B2B023040</span>
+                <div class="team-item">
+                    <div class="team-img"><img src="suci.jpg"></div>
+                    <h4>Suci Putri Utami</h4>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
 <footer>
-    <div style="font-family: 'Playfair Display'; font-size: 26px; font-weight: 700;">SEWU BIDANG</div>
-    <p style="font-weight: 300; opacity: 0.8; font-size: 14px;">Menghubungkan Sejarah, Budaya, dan Matematika</p>
-    <div style="margin-top: 30px;">
-        <small>© 2025 Sewu Bidang | Semarang, Jawa Tengah</small>
-    </div>
+    <div style="font-family:'Playfair Display';font-size:26px;font-weight:700;">SEWU BIDANG</div>
+    <p style="opacity:.8;font-size:14px;">© 2025 Sewu Bidang</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init({ duration: 1000, once: true });
-</script>
+<script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>

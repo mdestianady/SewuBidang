@@ -6,7 +6,6 @@
     <title>SEWU BIDANG | Etnomatematika Semarang</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -16,7 +15,6 @@
             --krem: #f4efe8;
             --putih: #ffffff;
             --gelap: #2c2c2c;
-            --transparan: rgba(255, 255, 255, 0.15);
         }
 
         * {
@@ -27,15 +25,15 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(rgba(244, 239, 232, 0.79), rgba(244, 239, 232, 0.79)), 
-                        url('lawangsewu.jpg.jpeg'); 
+            background: linear-gradient(rgba(244, 239, 232, 0.79), rgba(244, 239, 232, 0.79)),
+                        url('lawangsewu.jpg.jpeg');
             background-size: cover;
             background-attachment: fixed;
             color: #3a2a1a;
             overflow-x: hidden;
         }
 
-        /* --- NAVBAR --- */
+        /* ================= NAVBAR ================= */
         nav {
             position: sticky;
             top: 0;
@@ -49,12 +47,35 @@
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        nav .logo {
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-box {
+            background: white;
+            padding: 6px 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: var(--emas);
             letter-spacing: 1px;
+            margin-left: 6px;
         }
 
         nav .menu a {
@@ -63,15 +84,15 @@
             margin-left: 25px;
             font-size: 14px;
             font-weight: 500;
-            transition: 0.3s;
             text-transform: uppercase;
+            transition: 0.3s;
         }
 
         nav .menu a:hover {
             color: var(--emas);
         }
 
-        /* --- HERO SECTION --- */
+        /* ================= HERO ================= */
         .hero {
             text-align: center;
             padding: 150px 20px 120px;
@@ -96,7 +117,6 @@
 
         .cta-group {
             display: flex;
-            gap: 15px;
             justify-content: center;
         }
 
@@ -106,13 +126,8 @@
             text-decoration: none;
             font-weight: 600;
             transition: 0.4s;
-            display: inline-block;
-        }
-
-        .cta-primary {
             background: var(--coklat);
             color: white;
-            box-shadow: 0 10px 20px rgba(91, 58, 30, 0.3);
         }
 
         .cta:hover {
@@ -121,7 +136,7 @@
             color: var(--gelap);
         }
 
-        /* --- SECTION GENERAL --- */
+        /* ================= SECTION ================= */
         section {
             max-width: 1000px;
             margin: auto;
@@ -129,15 +144,13 @@
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
             padding: 50px;
             border-radius: 30px;
-            transition: 0.4s;
         }
 
-        /* --- FOOTER --- */
+        /* ================= FOOTER ================= */
         footer {
             background: var(--coklat);
             color: var(--krem);
@@ -152,12 +165,27 @@
             margin-bottom: 10px;
         }
 
-        /* --- RESPONSIVE --- */
+        /* ================= RESPONSIVE ================= */
         @media (max-width: 768px) {
-            nav { padding: 15px 5%; }
-            nav .menu { display: none; }
-            .hero h1 { font-size: 38px; }
-            .card { padding: 30px; }
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav .menu {
+                display: none;
+            }
+
+            .logo-box img {
+                height: 34px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .card {
+                padding: 30px;
+            }
         }
     </style>
 </head>
@@ -165,7 +193,20 @@
 <body>
 
 <nav>
-    <div class="logo">SEWU BIDANG</div>
+    <div class="logo-container">
+
+        <div class="logo-box">
+            <img src="logo-unimus.png" alt="Logo UNIMUS">
+        </div>
+
+        <div class="logo-box">
+            <img src="logo-me.png" alt="Logo Pendidikan Matematika UNIMUS">
+        </div>
+
+        <div class="logo-text">SEWU BIDANG</div>
+
+    </div>
+
     <div class="menu">
         <a href="index.html">Beranda</a>
         <a href="lawangsewu.html">Lawang Sewu</a>
@@ -177,43 +218,53 @@
 </nav>
 
 <section class="hero" data-aos="fade-up">
-    <span class="math-tag" style="background: rgba(212, 163, 115, 0.2); color: var(--coklat); padding: 5px 15px; border-radius: 30px; font-weight: 700; font-size: 12px; display: inline-block; margin-bottom: 10px;">Etnomatematika Semarang</span>
+    <span style="background: rgba(212,163,115,0.2); color: var(--coklat); padding: 6px 16px; border-radius: 30px; font-weight: 700; font-size: 12px;">
+        Etnomatematika Semarang
+    </span>
     <h1>Menemukan Bidang <br> Dalam Sejarah</h1>
-    <p>Belajar geometri melalui kemegahan arsitektur Lawang Sewu dan ikon bersejarah Semarang lainnya. Cara baru memahami matematika melalui budaya.</p>
+    <p>
+        Belajar geometri melalui kemegahan arsitektur Lawang Sewu dan ikon bersejarah
+        Semarang lainnya. Cara baru memahami matematika melalui budaya.
+    </p>
     <div class="cta-group">
-        <a href="materi.html" class="cta cta-primary">Pelajari Materi</a>
+        <a href="materi.html" class="cta">Pelajari Materi</a>
     </div>
 </section>
 
 <section>
-    <div class="card" style="text-align: left; background: var(--coklat); color: var(--krem);" data-aos="flip-up">
-        <h2 style="font-family: 'Playfair Display'; color: var(--emas); font-size: 32px; margin-top: 0;">Filosofi Sewu Bidang</h2>
-        <p style="line-height: 2; font-size: 16px;">
-            Nama "Sewu Bidang" terinspirasi dari Lawang Sewu (Seribu Pintu). Kami percaya bahwa setiap pintu dan jendela sejarah adalah gerbang menuju ilmu pengetahuan. Dengan mengintegrasikan <b>Etnomatematika</b>, siswa diajak tidak hanya menghafal rumus, tapi menghargai warisan budaya yang ada di depan mata mereka.
+    <div class="card" data-aos="flip-up" style="background: var(--coklat); color: var(--krem);">
+        <h2 style="font-family: 'Playfair Display'; color: var(--emas); font-size: 32px;">
+            Filosofi Sewu Bidang
+        </h2>
+        <p style="line-height: 2;">
+            Nama <b>"Sewu Bidang"</b> terinspirasi dari Lawang Sewu (Seribu Pintu).
+            Setiap pintu adalah gerbang ilmu pengetahuan. Melalui pendekatan
+            <b>Etnomatematika</b>, siswa diajak memahami geometri sekaligus
+            menghargai warisan budaya lokal.
         </p>
     </div>
 </section>
 
 <section id="cptp">
     <div class="card" data-aos="fade-up">
-        <h2 style="font-family: 'Playfair Display'; color: var(--coklat); font-size: 32px; margin-top: 0; text-align: center;">
+        <h2 style="font-family: 'Playfair Display'; text-align: center; font-size: 32px;">
             Capaian & Tujuan Pembelajaran
         </h2>
 
-        <h3 style="color: var(--coklat); margin-top: 30px;">📌 Capaian Pembelajaran (CP)</h3>
-        <p style="line-height: 2; font-size: 16px; text-align: justify;">
+        <h3>📌 Capaian Pembelajaran (CP)</h3>
+        <p style="line-height: 2; text-align: justify;">
             Peserta didik mampu memahami dan menganalisis konsep bangun datar,
-            meliputi unsur, sifat, keliling, luas, serta mengaitkannya dengan konteks budaya dan lingkungan sekitar,
-            khususnya melalui arsitektur bangunan bersejarah Lawang Sewu.
+            meliputi unsur, sifat, keliling, dan luas melalui konteks budaya
+            arsitektur Lawang Sewu.
         </p>
 
-        <h3 style="color: var(--coklat); margin-top: 25px;">🎯 Tujuan Pembelajaran (TP)</h3>
-        <ul style="line-height: 2; font-size: 16px; padding-left: 20px;">
-            <li>Mengidentifikasi berbagai bentuk bangun datar pada arsitektur Lawang Sewu.</li>
-            <li>Menjelaskan unsur dan sifat bangun datar yang ditemukan.</li>
-            <li>Menganalisis simetri lipat dan simetri putar pada pola bangunan.</li>
-            <li>Menyelesaikan masalah kontekstual yang berkaitan dengan bangun datar.</li>
-            <li>Menunjukkan sikap apresiatif terhadap budaya dan warisan lokal.</li>
+        <h3>🎯 Tujuan Pembelajaran (TP)</h3>
+        <ul style="line-height: 2;">
+            <li>Mengidentifikasi bangun datar pada arsitektur Lawang Sewu.</li>
+            <li>Menjelaskan unsur dan sifat bangun datar.</li>
+            <li>Menganalisis simetri lipat dan simetri putar.</li>
+            <li>Menyelesaikan masalah kontekstual.</li>
+            <li>Menghargai budaya dan warisan lokal.</li>
         </ul>
     </div>
 </section>
@@ -221,19 +272,14 @@
 <footer>
     <div class="footer-logo">SEWU BIDANG</div>
     <p>Media Pembelajaran Geometri Berbasis Kearifan Lokal Semarang</p>
-    <div style="margin: 20px 0; font-size: 20px;">
-        <span>🌐</span> <span>📸</span> <span>📧</span>
-    </div>
-    <hr style="opacity: 0.1; margin: 30px 0;">
-    <small>© 2025 | Dibuat untuk Pendidikan Indonesia Berkarakter</small>
+    <small>© 2025 | Pendidikan Indonesia Berkarakter</small>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({
         duration: 1000,
-        once: true,
-        easing: 'ease-in-out'
+        once: true
     });
 </script>
 
